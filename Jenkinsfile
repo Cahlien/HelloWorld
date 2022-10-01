@@ -12,7 +12,7 @@ pipeline {
       steps {
         cmake(
           installation: 'InSearchPath',
-          arguments: '--build=Release, -DCMAKE_BINARY_DIR=cmake-build-release, --target=install'
+          arguments: '--build=Release, -DCMAKE_BINARY_DIR=cmake-build-release'
         )
       }
     }
