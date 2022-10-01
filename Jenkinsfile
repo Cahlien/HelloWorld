@@ -10,6 +10,7 @@ pipeline {
     }
     stage("Build") {
       steps {
+        dir("HelloWorld") {
         cmake(
           installation: 'InSearchPath',
           buildType: 'Release',
@@ -17,6 +18,8 @@ pipeline {
           buildDir: 'build',
           targets: 'all'
         )
+        }
+    }
     stage("Test") {
       steps {
           ctest(
