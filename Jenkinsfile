@@ -10,9 +10,11 @@ pipeline {
     }
     stage("Test") {
       steps {
+      dir("HelloWorld") {
           ctest(
                   installation: 'InSearchPath'
           )
+      }
     }
   }
 }
