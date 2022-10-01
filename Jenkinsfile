@@ -5,7 +5,11 @@ pipeline {
       steps {
           cmakeBuild(
 		    installation: 'InSearchPath',
-		    '-DCMAKE_BUILD_TYPE=Release'
+		    buildType: 'Release',
+		    buildDir: 'build',
+		    generator: 'Unix Makefiles',
+		    cleanBuild: true,
+		    steps: [[withCmake: true]]
           )
       }
     }
