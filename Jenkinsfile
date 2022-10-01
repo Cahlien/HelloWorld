@@ -8,7 +8,7 @@ pipeline {
     }
     stage("Build") {
       steps {
-        dir("HelloWorld") {
+        dir("HelloWorld2") {
           cmakeBuild(
 		installation: 'InSearchPath'
 		)
@@ -17,7 +17,7 @@ pipeline {
     }
     stage("Test") {
       steps {
-        dir("HelloWorld") {
+        dir("HelloWorld2") {
           ctest(
                   installation: 'InSearchPath'
           )
