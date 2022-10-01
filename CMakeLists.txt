@@ -8,4 +8,4 @@ add_executable(TestHelloWorld test_main.cpp)
 
 add_executable(HelloWorld main.cpp)
 
-add_test(NAME HelloWorld COMMAND HelloWorld)
+add_test(NAME TestHelloWorld COMMAND TestHelloWorld)
