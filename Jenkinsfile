@@ -6,11 +6,6 @@ pipeline {
         deleteDir()
       }
     }
-    stage("Clone Repo") {
-      steps {
-        sh "git clone https://github.com/cahlien/HelloWorld.git"
-      }
-    }
     stage("Build") {
       steps {
         dir("HelloWorld") {
