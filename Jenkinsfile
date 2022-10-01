@@ -6,7 +6,6 @@ pipeline {
           cmakeBuild(
 		    installation: 'InSearchPath',
 		    buildType: 'Release',
-		    buildDir: 'build',
 		    generator: 'Unix Makefiles',
 		    cleanBuild: true,
 		    steps: [[withCmake: true]]
