@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage("Generate Build System") {
+    stage("Build") {
       steps {
           cmakeBuild(
 		    installation: 'InSearchPath',
@@ -10,14 +10,6 @@ pipeline {
 		    cleanBuild: true,
 		    steps: [[withCmake: true]]
           )
-      }
-    }
-    stage("Build") {
-      steps {
-        cmake(
-          installation: 'InSearchPath',
-          arguments: '--install'
-        )
       }
     }
     stage("Test") {
