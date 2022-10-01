@@ -13,10 +13,6 @@ pipeline {
         dir("HelloWorld") {
           cmake(
             installation: 'InSearchPath',
-            buildType: 'Release',
-            sourceDir: '.',
-            buildDir: 'build',
-            targets: 'all'
           )
         }
       }
