@@ -4,21 +4,22 @@ pipeline {
     stage("Generate Build System") {
       steps {
           cmakeBuild(
-		installation: 'InSearchPath'
-		)
+		    installation: 'InSearchPath'
+          )
       }
     }
     stage("Build") {
       steps {
         dir("HelloWorld") {
-        cmake(
-          installation: 'InSearchPath',
-          buildType: 'Release',
-          sourceDir: '.',
-          buildDir: 'build',
-          targets: 'all'
-        )
+          cmake(
+            installation: 'InSearchPath',
+            buildType: 'Release',
+            sourceDir: '.',
+            buildDir: 'build',
+            targets: 'all'
+          )
         }
+      }
     }
     stage("Test") {
       steps {
