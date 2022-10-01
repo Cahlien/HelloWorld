@@ -5,7 +5,7 @@ pipeline {
       steps {
           cmakeBuild(
 		    installation: 'InSearchPath',
-		    arguments: '-DCMAKE_BUILD_TYPE=Release'
+		    '-DCMAKE_BUILD_TYPE=Release'
           )
       }
     }
