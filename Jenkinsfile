@@ -10,11 +10,9 @@ pipeline {
     }
     stage("Build") {
       steps {
-        dir("HelloWorld") {
-          cmake(
-            installation: 'InSearchPath',
-          )
-        }
+        cmake(
+          installation: 'InSearchPath',
+        )
       }
     }
     stage("Test") {
