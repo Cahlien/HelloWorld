@@ -10,7 +10,7 @@ pipeline {
     }
     stage("Test") {
       steps {
-          ctest(
+          cmakeTest(
                   installation: 'InSearchPath'
           )
     }
